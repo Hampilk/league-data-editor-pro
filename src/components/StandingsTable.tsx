@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useMemo } from "react"
@@ -52,7 +53,7 @@ export function StandingsTable({ standings = [], className }: StandingsTableProp
 
   if (standings.length === 0) {
     return (
-      <Card className={cn("animate-in fade-in-50 bg-black/20 border-white/5", className)}>
+      <Card className={cn("animate-in fade-in-50 bg-black/20 border-white/5 hover:border-blue-500/20 transition-all", className)}>
         <CardHeader>
           <CardTitle className="text-white">Standings</CardTitle>
         </CardHeader>
@@ -64,7 +65,7 @@ export function StandingsTable({ standings = [], className }: StandingsTableProp
   }
 
   return (
-    <Card className={cn("animate-in fade-in-50 bg-black/20 border-white/5", className)}>
+    <Card className={cn("animate-in fade-in-50 bg-black/20 border-white/5 hover:border-blue-500/20 transition-all", className)}>
       <CardHeader>
         <CardTitle className="text-white">Standings</CardTitle>
       </CardHeader>
@@ -95,14 +96,14 @@ export function StandingsTable({ standings = [], className }: StandingsTableProp
                     key={entry.team}
                     className={cn(
                       "border-b border-white/5 hover:bg-white/5",
-                      zones?.champions === entry.position && "bg-blue-500/5",
+                      zones?.champions === entry.position && "bg-blue-500/10",
                       zones?.championsLeague >= entry.position &&
                         entry.position > (zones?.champions || 0) &&
-                        "bg-blue-500/5",
+                        "bg-blue-500/10",
                       zones?.europaLeague >= entry.position &&
                         entry.position > (zones?.championsLeague || 0) &&
-                        "bg-amber-500/5",
-                      entry.position > (zones?.relegation || 0) && "bg-red-500/5",
+                        "bg-amber-500/10",
+                      entry.position > (zones?.relegation || 0) && "bg-red-500/10",
                     )}
                   >
                     <TableCell className="relative px-4 py-3 font-medium">

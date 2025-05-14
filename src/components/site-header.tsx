@@ -1,7 +1,7 @@
 
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { Search, Bell, ShoppingBag, Instagram, Twitter, Facebook, Menu } from "lucide-react"
+import { Search, Bell, ShoppingBag, Instagram, Twitter, Facebook, Menu, Trophy } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -46,6 +46,10 @@ export function SiteHeader() {
               <Facebook className="h-4 w-4" />
               <span className="sr-only">Facebook</span>
             </a>
+            <Link to="/soccer" className="hover:text-white transition-colors flex items-center gap-1 bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full">
+              <Trophy className="h-3 w-3" />
+              <span className="text-xs font-medium">Soccer Analysis</span>
+            </Link>
           </div>
         </div>
 

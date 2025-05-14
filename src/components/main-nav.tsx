@@ -23,6 +23,10 @@ const items = [
     title: "Women",
     href: "/women",
   },
+  {
+    title: "Soccer Analytics",
+    href: "/soccer",
+  },
 ]
 
 export function MainNav({ className }: { className?: string }) {
