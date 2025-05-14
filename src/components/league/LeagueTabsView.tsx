@@ -15,13 +15,15 @@ interface LeagueTabsViewProps {
   league: any // Add league prop
   defaultTab?: string
   onTabChange?: (tab: string) => void
+  onMatchClick?: (match: Match) => void
 }
 
 export const LeagueTabsView = ({ 
   matches, 
-  league, // Add league parameter
+  league, 
   defaultTab = "matches",
-  onTabChange 
+  onTabChange,
+  onMatchClick
 }: LeagueTabsViewProps) => {
   const standings = useMemo(() => calculateStandings(matches), [matches])
   const teamForms = useMemo(() => calculateTeamForms(matches), [matches])
@@ -56,7 +58,7 @@ export const LeagueTabsView = ({
       </TabsList>
 
       <TabsContent value="matches" className="p-0 mt-6">
-        <MatchesTable matches={matches} />
+        <MatchesTable matches={matches} onMatchClick={onMatchClick} />
       </TabsContent>
       <TabsContent value="standings" className="p-0 mt-6">
         <StandingsTable standings={standings} />
