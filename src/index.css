@@ -1,12 +1,11 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #0a0a0a;
+  --background: #101820;
   --foreground: #ffffff;
-  --card: #131313;
+  --card: #0a0f14;
   --card-foreground: #ffffff;
   --primary: #3b82f6;
   --primary-foreground: #ffffff;
@@ -21,7 +20,6 @@
   --border: rgba(255, 255, 255, 0.1);
   --input: rgba(255, 255, 255, 0.1);
   --ring: #3b82f6;
-  --radius: 0.75rem;
 }
 
 body {
@@ -44,22 +42,4 @@ body {
   to {
     opacity: 1;
   }
-}
-
-@keyframes text-shimmer {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -200% 0;
-  }
-}
-
-.animate-text-shimmer {
-  animation: text-shimmer 2.5s ease-out infinite;
-  background: linear-gradient(90deg, rgba(59, 130, 246, 0.8), #ffffff, rgba(59, 130, 246, 0.8));
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
 }
