@@ -1,5 +1,6 @@
 
-import { Soccer, Trophy, Flag } from "lucide-react"
+import { Trophy, Flag } from "lucide-react"
+import { Ball } from "@/components/icons/Ball"
 import { Button } from "@/components/ui/button"
 
 export function SoccerHero() {
@@ -28,7 +29,7 @@ export function SoccerHero() {
                 Browse Leagues
               </Button>
               <Button variant="outline" className="bg-white/5 border-white/10 text-white px-6 py-6 rounded-xl">
-                <Soccer className="mr-2 h-5 w-5" />
+                <Ball className="mr-2 h-5 w-5" />
                 Latest Matches
               </Button>
             </div>
@@ -42,7 +43,7 @@ export function SoccerHero() {
               </div>
               <div className="absolute top-0 right-10 animate-bounce">
                 <div className="bg-blue-500/20 p-4 rounded-full">
-                  <Soccer className="w-12 h-12 text-blue-400" />
+                  <Ball className="w-12 h-12 text-blue-400" />
                 </div>
               </div>
               <div className="absolute bottom-10 left-0 animate-pulse delay-300">

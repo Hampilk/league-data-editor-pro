@@ -60,13 +60,12 @@ export const MatchesTable = memo(({ matches = [], onMatchClick }: MatchesTablePr
         {viewType === "cards" ? (
           <MatchesCardsView matches={sortedMatches} onMatchClick={onMatchClick} />
         ) : viewType === "rounds" ? (
-          <MatchesByRound matchesByRound={matchesByRound} onMatchClick={onMatchClick} />
+          <MatchesByRound matchesByRound={matchesByRound} />
         ) : (
           <MatchesTableView
             matches={sortedMatches}
             onRequestSort={requestSort}
             getSortIcon={getSortIcon}
-            onMatchClick={onMatchClick}
           />
         )}
       </CardContent>
